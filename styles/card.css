@@ -6,7 +6,7 @@
     perspective: 800px;
     transition: all 0.3s ease 0s;
     width: 23.7%;
-   
+   zoom: -122222222;
   }
   
   .cardBox:hover .card {
