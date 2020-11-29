@@ -9,7 +9,7 @@
   }
   .Header {
     width: 100%;
-
+z-index: 11111111111111111111111;
     align-items: center;
   }
   .logo {
