@@ -16,59 +16,57 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <header class="Header">
       <div class="logo">
         <img src="./img/virus.svg" alt="" />
         <h4>Vacuna Covid-19</h4>
       </div>
-      <span class="button"
-        ><nav id="nav" class="header-nav">
+      <span class="button">
+        <nav id="nav" class="header-nav">
           <ul>
             <a
               class="a-active animate__animated animate__fadeInRight"
               href="index.html"
             >
-              <li>Home</li></a
-            >
+              <li>Home</li>
+            </a>
             <a
               class="a animate__animated animate__fadeInRight"
               href="avances.html"
             >
-              <li>Avances</li></a
-            >
+              <li>Avances</li>
+            </a>
             <a
               class="a animate__animated animate__fadeInRight"
               href="pruebas.html"
-              ><li>Pruebas</li></a
             >
+              <li>Pruebas</li>
+            </a>
             <a
               class="a animate__animated animate__fadeInRight"
               href="mitos.html"
-              ><li>Mitos</li></a
             >
+              <li>Mitos</li>
+            </a>
           </ul>
         </nav>
-        <img onclick="active()" src="./img/menu.svg"
-      /></span>
+        <img onclick="active()" src="./img/menu.svg" />
+      </span>
     </header>
 
     <div class="hero-home">
-    
-
       <canvas id="canvas" width="1280" height="720"> </canvas
       ><input type="range" min="0" max="32" step="1" value="1" id="slider" />
-      <div class="info">  <h3>El COVID-19</h3>
-        <h6>
-          Los coronavirus son una familia de virus que causan enfermedades
-          (desde el resfriado común hasta enfermedades respiratorias más graves)
-          y circulan entre humanos y animales. En este caso, se trata del
-          SARS-COV2. Apareció en China en diciembre pasado y provoca una
-          enfermedad llamada COVID-19, que se extendió por el mundo y fue
-          declarada pandemia global por la Organización Mundial de la Salud.
-        </h6>
+      <div class="info">
+        <h3 id="title"></h3>
+        <h6 id="content"></h6>
       </div>
       <script>
+        var title = document.getElementById("title");
+        var content = document.getElementById("content");
+
         const slider = document.querySelector("#slider");
         const canvas = document.querySelector("#canvas");
         const ctx = canvas.getContext("2d");
@@ -94,8 +92,50 @@
           ctx.drawImage(images[index], 0, 0, canvas.width, canvas.height);
         }
         function handleInput() {
+          if (slider.value == 1) {
+            title.innerHTML = `El COVID-19`;
+            content.innerHTML = ` Los coronavirus son una familia de virus que causan enfermedades
+          (desde el resfriado común hasta enfermedades respiratorias más graves)
+          y circulan entre humanos y animales. En este caso, se trata del
+          SARS-COV2. Apareció en China en diciembre pasado y provoca una
+          enfermedad llamada COVID-19, que se extendió por el mundo y fue
+          declarada pandemia global por la Organización Mundial de la Salud.`;
+          }
+          if (slider.value == 8) {
+            title.innerHTML = `¿Cómo se transmite?`;
+            content.innerHTML = `Los coronavirus humanos se transmiten de una persona infectada a otras:
+a través de las gotículas que expulsa un enfermo al toser y estornudar
+al tocar o estrechar la mano de una persona enferma,
+un objeto o superficie contaminada con el virus y luego llevarse las manos sucias a boca, nariz u ojos.`;
+          }
+          if (slider.value == 16) {
+            title.innerHTML = `Tratamiento`;
+            content.innerHTML = `No existe medicamento que cure los coronavirus, solo para aliviar los síntomas que generan.
+
+El virus que causa COVID-19 es muy nuevo, y no hay vacuna.
+En la mayor parte de los casos, la enfermedad no es grave y el cuerpo la controla en alrededor de dos semanas.
+Si presentas síntomas compatibles con COVID-19 y tienes dificultad para respirar o perteneces a uno de los grupos de riesgo; entonces cúbrete boca y nariz con un tapabocas, una bufanda o un pañuelo y acude de inmediato al médico o a la clínica más cercana.`;
+          }
+          if (slider.value == 24) {
+            title.innerHTML = `Cuidados para el enfermo`;
+            content.innerHTML = `Si tienes síntomas compatibles con coronavirus y no tienes dificultad para respirar o perteneces a uno de los grupos de riesgo, no vayas al doctor. Solo quédate en casa y haz lo siguiente:
+No te automediques.
+No saludes de mano, beso o abrazo y mantén tu sana distancia respecto a quienes conviven contigo.
+Lávate las manos frecuentemente con agua y jabón, al menos 20 segundos, o desinféctalas con gel.
+Aliméntate sanamente, con verduras y frutas y toma al menos ocho vasos de agua simple.
+Laven vasos y cubiertos con agua, jabón y cloro.`;
+          }
+          if (slider.value == 32) {
+            title.innerHTML == `El COVID-19`;
+            content.innerHTML = ` Los coronavirus son una familia de virus que causan enfermedades
+          (desde el resfriado común hasta enfermedades respiratorias más graves)
+          y circulan entre humanos y animales. En este caso, se trata del
+          SARS-COV2. Apareció en China en diciembre pasado y provoca una
+          enfermedad llamada COVID-19, que se extendió por el mundo y fue
+          declarada pandemia global por la Organización Mundial de la Salud.`;
+          }
           loadIamge(slider.value);
-          console.log();
+          console.log(slider.value);
         }
       </script>
     </div>
