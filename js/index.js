@@ -18,7 +18,7 @@ var x = 1;
 function cambioCarrteUno() {
   setInterval(() => {
     x < 7 ? x++ : (x = 1);
-    dom.carreteUno.src = `../img/carrete1/${x}.jpg`;
+    dom.carreteUno.src = `./img/carrete1/${x}.jpg`;
   }, 3000);
 }
 cambioCarrteUno();
