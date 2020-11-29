@@ -29,10 +29,21 @@
           font-size: 1em;
         text-align: justify;
       } 
+      
+      .container >img ,iframe{
 
+        width: 100%;
+        margin: 2em auto;
+      }
       
 }
 @media(min-width:411px){
+  .container >img ,iframe{
+
+    width: 90%;
+    height: 17em;
+    margin: auto;
+  }
     .main {
         width: 100%;
         display: grid;
@@ -41,8 +52,9 @@
       }
       .container {
         margin: auto;
-        width: 50%;
-      
+        width: 70%;
+      justify-content: center;
+
         display: grid;
         grid-template-columns: 60% 40%;
       }

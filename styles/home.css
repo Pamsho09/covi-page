@@ -1,0 +1,44 @@
+@media (max-width: 410px){
+    .hero-home{
+        position: absolute;
+        
+        width:80%;
+      
+        
+        display: grid;
+        height:70vh;
+        justify-content: center;
+        align-items:flex-end;
+        }
+        canvas{
+            border-radius: 20px;
+            width:100%;
+            height:auto;
+        }
+        #slider{
+            margin:  3em auto; 
+            width:50%;
+        }
+}
+@media (min-width: 411px){
+    .hero-home{
+        position:relative;
+        
+        width:100%;
+        margin:3em auto;
+        
+        display: grid;
+        height:50vh;
+        justify-content: center;
+        align-items:flex-end;
+        }
+        canvas{
+            border-radius: 20px;
+            width:100%;
+            
+        }
+        #slider{
+            margin:  3em auto; 
+            width:50%;
+        }
+}

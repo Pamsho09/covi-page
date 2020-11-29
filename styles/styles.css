@@ -32,22 +32,20 @@
     font-size: 1.4em;
   }
   .header-nav {
-  display: none;
+    display: none;
     width: 8em;
     position: relative;
-   
   }
   .header-nav ul {
-    position:absolute;
+    position: absolute;
     width: 70%;
-  gap:1em;
+    gap: 1em;
     justify-content: center;
     display: grid;
     align-items: center;
-  
-      bottom: 1px;
-      right: 68px;
-  
+
+    bottom: 1px;
+    right: 68px;
   }
   a {
     width: 70%;
@@ -58,10 +56,9 @@
     text-decoration: none;
     list-style: none;
     align-items: center;
-  
   }
-a li {
-    width:7em;
+  a li {
+    width: 7em;
     background-color: rgb(235, 85, 105);
     color: white;
     padding: 5px;
@@ -73,30 +70,32 @@ a li {
     border-radius: 20px;
   }
 
-  
   .button {
     position: fixed;
     width: 5em;
     background-color: #fff;
     box-shadow: 0 2px rgba(0, 0, 0, 0.4);
-  
+
     bottom: 17px;
     right: 17px;
     height: 5em;
-    
+
     border-radius: 50%;
   }
-  .button img{
+  .button img {
     position: absolute;
     top: 1em;
     right: 1em;
 
     height: 3em;
     width: 3em;
-    margin:auto;
+    margin: auto;
   }
-}@media (min-width: 411px) {
-  .button img{display:none;}
+}
+@media (min-width: 411px) {
+  .button img {
+    display: none;
+  }
   .Header {
     width: 100%;
     display: flex;
@@ -159,5 +158,9 @@ a li {
     color: white;
     padding: 10px;
     border-radius: 20px;
+  }
+  .boxsContainer {
+    width: 100%;
+    grid-column: 1/3;
   }
 }
