@@ -19,10 +19,11 @@
         margin: 1em 0;
       }
       .container h3 {
+        color: rgb(3, 110, 182);
         margin: 0.5em 0;
       }
       .container h4 {
-       
+       color: rgb(3, 110, 182);
         margin: 0.5em 0;
       }
       .container p {
@@ -64,11 +65,11 @@
       }
       .container h3 {
         grid-column: 1/3;
-        margin: 0.5em 0;
+        margin: 0.5em 0;     color: rgb(3, 110, 182);
       }
       .container h4 {
         grid-column: 1/3;
-        margin: 0.5em 0;
+        margin: 0.5em 0;     color: rgb(3, 110, 182);
       }
       .container p {
         text-align: justify;
